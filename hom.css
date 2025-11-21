@@ -1,0 +1,188 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+body{
+    background:green;
+}
+header{
+    border:none;
+    border-bottom:2px solid;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:2%;
+    border-radius:7px;
+    height:10vh;
+    box-shadow:2px 3px 2px black;
+}
+header h2{
+    font-size:1.5rem;
+    font-family:'Times New Roman', Times, serif;
+    font-weight:800;
+    padding:10px;
+    box-shadow:5px 5px rgb(47, 220, 122),
+    -5px -5px rgb(47, 220, 122),
+    5px -5px rgb(47, 220, 122),
+    -5px 5px rgb(47, 220, 122);
+    background:rgba(10, 126, 60, 0.5);
+    transition:.5s;
+}
+header h2:hover{
+    transform:scale(1.05);
+}
+header ul{
+    display:flex;
+    justify-content:space-between;
+    height:1.6rem;
+    width:50%;
+}
+header ul li{
+    list-style:none;
+    font-size:1.2rem;
+    font-weight:600;
+}
+header ul li a{
+    color:white;
+    text-decoration:none;
+}
+header ul  .drop{
+    color:white;
+    font-weight:600;
+    font-size:1.2rem;
+    height:1.3rem;
+    cursor:pointer;
+    overflow:hidden;
+    transition:.6s;
+}
+header ul .drop:hover{
+    overflow:visible;
+}
+header ul  .drop .first{
+    margin-bottom:2px;
+}
+header ul .drop .remai{
+    background:green;
+    border-top:none;
+    height:10rem;
+    box-shadow:2px 2px 2px blue,
+    -2px -2px 2px rgba(0, 0, 255, 0.788);
+}
+header ul .drop .remai ul{
+    display:block;
+    color:blue;
+}
+header ul .drop .remai ul{
+    padding:5px;
+    width:100%;
+}
+header ul .drop .remai ul li{
+    margin-top:1vh;
+    color:white;
+    cursor:pointer;
+    padding:2px;
+}
+header ul .drop .remai ul li:hover{
+    background:blueviolet;
+}
+main{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:1.7rem;
+    font-weight:900;
+    height:78vh;
+}
+footer{
+    text-align:center;
+    font-size:1.3rem;
+}
+@media(max-width:430px){
+    body{
+        background:lightblue;
+    }
+    header{
+        height:7.5vh;
+        box-shadow:2px 4px 2px grey;
+        border:none;
+        padding-right:1%;
+    }
+    header h2{
+        font-size:1.15rem;
+        padding:2.5px;
+    }
+    header ul{
+        width:60%;
+    }
+    header ul li{
+        font-size:1rem;
+    }
+    header ul  .drop{
+        font-size:1rem;
+        height:1rem;
+    }
+    header ul .drop .first{
+        margin-bottom:2px;
+    }
+    header ul .drop .remai{
+        height:8.7rem;
+        background:lightblue;
+        box-shadow:3px 3px 3px rgba(123, 105, 105, 0.055),
+        -3px -3px 3px rgba(123, 105, 105, 0.055),
+        -3px 3px 3px rgba(123, 105, 105, 0.055),
+        3px -3px 3px rgba(123, 105, 105, 0.055);
+    }
+
+    header ul .drop .remai ul li:hover{
+    background:black;
+}
+    main{
+        font-size:1.4rem;
+        height:80vh;
+    }
+    footer{
+        font-size:1.1rem;
+    }
+
+}
+@media (min-width:1020px){
+    body{
+        background:lime;
+    }
+    header h2{
+        padding:13px;
+        font-size:1.7rem;
+    }
+    header ul{
+        width:40%;
+    }
+    header ul li{
+        font-size:1.5rem;
+    }
+    header ul li a{
+        color:black;
+    }
+    header ul .drop{
+        color:black;
+        font-size:1.5rem;
+        height:1.7rem;
+    }
+    header ul .drop .first{
+        margin-bottom:4px;
+    }
+    header ul .drop .remai{
+        height:11.1rem;
+        box-shadow:3px 3px 3px green,
+        -3px -3px 3px green,
+        -3px 3px 3px green,
+        3px -3px 3px green;
+        background:rgb(8, 223, 101);
+    }
+    header ul .drop .remai ul li:hover{
+    background:rgb(145, 20, 234);
+}
+    main{
+        font-size:2rem;
+    }
+}
