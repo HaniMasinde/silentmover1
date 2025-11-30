@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login</title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+        }
+        body{
+            background:rgba(149, 149, 51, 0.71);
+            display:flex;
+            justify-content:center;
+            padding-top:10%;
+        }
+        .login{
+            box-shadow:4px 4px 3px grey;
+            background:rgb(103, 244, 164);
+            width:85%;
+            padding:2%;
+            display:flex;
+            align-items:center;
+            justify-content:center;
+        }
+        .login form h2{
+            margin-bottom:1%;
+            text-align:center;
+            font-size:1.7rem;
+            text-transform:uppercase;
+        }
+        .login form .input-field{
+            width:280px;
+            height:4.5vh;
+            margin-bottom:10px;
+            border-radius:12px;
+        }
+        .login form .input-field input{
+            height:100%;
+            width:100%;
+            outline:none;
+            padding-left:8px;
+            border:2px solid #fff;
+            background:#fad;
+            border-radius:inherit;
+            font-size:1.005rem;
+        }
+        .login form .buton{
+            display:flex;
+            justify-content:center;
+            height:4.5vh;
+            margin-bottom:2.2%;       
+         }
+         .login form .buton button{
+            background:lightblue;
+            padding:5px;
+            font-weight:700;
+            text-transform:uppercase;
+            border-radius:6px;
+            border:none;
+                 }
+        .or{
+            display: flex;
+            justify-content:space-between;
+            width:100%;
+            align-items:center;
+            font-size:1.1rem;
+            margin-bottom:2.5%;
+        }
+        .or a{
+            text-decoration:none;
+            color:red;
+        }
+        footer{
+            text-align:center;
+
+            font-size:1.1rem;
+        }
+        @media(min-width:600px){
+            body{
+                background:rgb(219, 123, 123);
+            }
+            .login{
+                width:550px;
+                box-shadow:4px 4px 3px #d55353; 
+            }
+            .login form .input-field{
+                width:320px;
+                height:40px;
+            }
+            .login form .input-field input{
+                background:lightblue;
+            }
+            .login form .buton{
+                height:40px;
+            }
+            .login form .buton button{
+                font-weight:700;
+                background:rgba(133, 212, 28, 0.661);
+                color:#fff;
+                font-size:1.2rem;
+                width:75px;
+            }
+            .or{
+                font-size:1.15rem;
+            }
+            .or a{
+                font-weight:900;
+            }
+            footer{
+                font-size:1.2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="login">
+        <form action="">
+            <h2>login here</h2>
+            <div class="input-field">
+                <input type="text" placeholder="username eg David" id="name">
+            </div>
+            <div class="input-field">
+                <input type="text" placeholder="email eg, example@gmail.com" id="email">
+            </div>
+            <div class="input-field">
+                <input type="password" placeholder="password" id="pass">
+            </div>
+            <div class="buton"><button type="submit">login</button></div>
+            <div class="or">
+                <p> Try Another Way</p><a href="login1.html">click here</a>
+            </div>
+            <footer>
+                <p>&copy;2025</p>
+                <p>&trade;HaniMasinde</p>
+                <p>All Rights Reserved</p>
+            </footer>
+            
+        </form>
+    </div>
+    <script>
+
+        let username=document.getElementById('name')
+        let email=document.getElementById('email')
+        let password=document.getElementById('pass')
+        let form=document.querySelector('form')
+        let buton=document.querySelector('button') 
+
+        form.addEventListener('submit',(ev)=>{
+            ev.preventDefault()
+            let isValid=true
+
+            const name=username.value.trim();
+            const mail=email.value.trim();
+            const pas=password.value.trim();
+
+        function correctName(){
+
+            if(name==''){
+                username.style.borderColor='red';
+                isValid=false;
+                return
+            }
+            if(name.length<5){
+                username.style.borderColor='red';
+                isValid=false;
+                return;
+            }
+
+        }
+
+         function correctEmail(){
+
+            if(email==''){
+                email.style.borderColor='red';
+                isValid=false;
+                return
+            }
+            if(!mail.includes('@')){
+                email.style.borderColor='red';
+                isValid=false;
+                return;
+            }
+            if(!mail.includes('.com')){
+                email.style.borderColor='red';
+                isValid=false;
+                return;
+            }
+
+        }
+
+        function correctPassword(){
+             if(pas==''){
+                password.style.borderColor='red';
+                isValid=false;
+                return
+            }
+            if(pas.length<4){
+                password.style.borderColor='red';
+                isvalid=false;
+                return
+            }
+        }
+
+        correctName();
+        correctEmail();
+        correctPassword();
+
+        if(isValid){
+            buton.addEventListener('click',()=>{
+                window.location.href='home.html'
+                alert('Login Succesful');
+                password.style.borderColor='lime'
+                email.style.borderColor='lime'
+                username.style.borderColor='lime'
+            })
+        }
+        if(!isValid){
+            buton.addEventListener('click',()=>{
+                alert('Invalid credentials');
+            })
+        }
+
+        })
+
+    </script>
+</body>
+</html>

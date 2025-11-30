@@ -1,0 +1,218 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+body{
+    background:#fcc;
+    padding:2% 5% 0 5%;
+}
+.big-cont{
+    padding:2%;
+    display:flex;
+    justify-content:center;
+}
+.big-cont .small{
+    background:grey;
+    height:60vh;
+    position:relative;
+    transform-style:preserve-3d;
+    width:99%;
+    transition:1.5s;
+}
+.small .face{
+    position:absolute;
+    height:100%;
+    width:100%;
+    backface-visibility: hidden;
+    transform-style:preserve-3d;
+}
+.small .back{
+    height:100%;
+    width:100%;
+    background:yellow;
+    transform:rotateY(180deg);
+    padding:3%;
+}
+.back .input-field{
+    margin-top:2%;
+    height:3.8vh;
+}
+.input-field input{
+    height:100%;
+    width:48%;
+    border-radius:10px;
+    padding:7px;
+    outline:none;
+    border:1px solid blue;
+    font-size:1.05rem;
+    font-weight:700;
+}
+.input-field input::placeholder{
+    color:rgb(188, 107, 45);
+    font-size:1rem;
+}
+.back .text{
+    background:lime;
+    height:25vh;
+    border-radius:14px;
+    margin:1.5% 0;
+}
+.back .text textarea{
+    border:none;
+    height:100%;
+    width:100%;
+    background:transparent;
+    padding:12px;
+    font-size:1.05rem;
+}
+.btn2{
+    display:flex;
+    justify-content:right;
+    padding-right:3%;
+    height:3.6vh;
+}
+.btn2 button{
+    width:22%;
+    font-size:1.1rem;
+    font-weight:800;
+    border-radius:10px;
+    background:seagreen
+}
+.back .others{
+    font-size:1.2rem;
+    margin-top:10%;
+    margin-left:10%;
+    font-weight:bold;
+}
+.small .front{
+    background:green;
+    display: flex;
+    justify-content:center;
+    align-items:center;
+}
+.front .image-cont{
+    border:2px solid;
+    height:92%;
+    width:85%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+.front .image-cont .image{
+    height:100%;
+    width:100%;
+    background:red;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:2px;
+}
+img{
+    height:100%;
+    width:100%;
+}
+.btn{
+    height:3.5vh;
+    padding-left:3%;
+    margin-top:2%;
+}
+.btn button{
+    height:100%;
+    background:lightblue;
+    border:1px double blue;
+    width:20%;
+    font-size:1.2rem;
+    border-radius:10px;
+}
+footer{
+    text-align:center;
+    margin-top:3%;
+    font-size:1.3rem;
+}
+@media(max-width:600px){
+    body{
+        background-image:url('contact.jpg');
+        background-position:center;
+        background-size:cover;
+        background-repeat:no-repeat;
+        background-attachment: fixed;
+    }
+    .small .front{
+        background: lightblue;
+    }
+    .front .image-cont{
+        height:75%;
+        width:95%;
+    }
+    .front .image-cont .image{
+        background:yellow;
+    }
+    .btn button{
+        width:90px;
+        font-size:.99rem;
+        transition:600ms;
+    }
+    .btn button:hover{
+        cursor:pointer;
+        background:yellow;
+    }
+    .back .input-field{
+        height:3.5vh;
+    }
+    .back .input-field input{
+        font-size:1.1rem;
+        width:80%;
+        background:lime;
+    }
+    .back .input-field input::placeholder{
+        color:grey;
+        font-size:.99rem;
+    }
+    .back .text textarea{
+        font-size:1rem;
+    }
+    .back .btn2 button{
+        font-size:.99rem;
+        font-weight:560;
+        color:white;
+        width:25%;
+        background:rgb(103, 103, 203);
+    }
+    .back .others{
+        margin-left:1%;
+        font-size:1.03rem;
+    }
+    footer{
+        font-size:1.1rem;
+        color:white;
+    }
+}
+@media(min-width:700px){
+    body{
+        background:seagreen;
+        padding-top:1.5%;
+    }
+    .big-cont{
+        border:none;
+    }
+    .big-cont .small{
+        border:2px solid blue;
+        height:500px;
+        width:500px
+    }
+    .btn{
+        height:4vh;
+        margin-left:25%;
+        margin-top:-1%;
+    }
+    .btn button{
+        width:120px;
+    }
+    .back .others{
+        margin-top:-4px;
+    }
+    footer{
+        margin-top:-.1%;
+    }
+}

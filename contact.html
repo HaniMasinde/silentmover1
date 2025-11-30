@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>contact page</title>
+    <link rel="stylesheet" href="conta.css">
+</head>
+<body>
+    <div class="big-cont">
+        <div class="small" id="move">
+            <div class="face front">
+                <div class="image-cont">
+                    <div class="image">
+                        <img src="hani.jpg" alt="Hani">
+                    </div>
+                </div>
+            </div>
+            <div class="face back">
+                <div class="input-field">
+                    <input type="text" placeholder="username" id="username">
+                </div>
+                <div class="input-field">
+                    <input type="text" placeholder="email" id="email">
+                </div>
+                <div class="text">
+                    <textarea name="" id="" placeholder="write a message to Haningtone" ></textarea>
+                </div>
+                <div class="btn2">
+                    <button id="sub">submit</button>
+                </div>
+                <div class="others">
+                    Call:0794358892<br>Message:0113745958<br>
+                    Email:Haningtonemasinde@gmail.com
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="btn">
+        <button id="flick" onclick="rot()">Click Here</button>
+    </div>
+    <footer>
+        <p>&copy;2025</p>
+        <p>&trade;HaniMasinde</p>
+        <p>All Rights Reserved</p>
+    </footer>
+</body>
+<script>
+    let buton=document.getElementById('flick');
+    let tar=document.getElementById('move');
+    
+    function rot(){
+        tar.style.transform='rotateY(180deg)';
+    }
+    </script>
+</html>

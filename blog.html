@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>blog</title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing: border-box;
+        }
+        body{
+            background-image:url('blog.jpg');
+            background-size:cover;
+            background-repeat:no-repeat;
+            background-attachment:fixed;
+            background-position:center;
+        }
+        .mess{
+            height:77vh;
+            display:flex;
+            justify-content:center;
+            align-items:center;
+        }
+        .mess h1{
+            background:linear-gradient(to top,red,blue);
+            background-clip:text;
+            color:transparent;
+            animation: fade 2500ms linear infinite;
+        }
+        @keyframes fade{
+            0%{
+                transform:scale(1);
+            }
+            50%{
+                transform:scale(1.5)
+            }
+            100%{
+                transform:scale(1);
+            }
+        }
+        footer{
+            text-align:center;
+            color:white;
+            font-size:1.3rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="mess">
+        <h1>
+            Coming soon
+        </h1>
+    </div>
+    <footer>
+        <p>&copy;2025</p>
+        <p>&trade;HaniMasinde</p>
+        <p>All Rights Reserved</p>
+    </footer>
+</body>
+</html>
