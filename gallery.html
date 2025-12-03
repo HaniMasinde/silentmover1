@@ -4,8 +4,71 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gallery</title>
+    <style>
+        *{
+            padding:0;
+            margin:0;
+            box-sizing:border-box;
+        }
+        body{
+            background:grey;
+            padding-top:1.2%;
+        }
+        .album{
+            text-align: center;
+            font-size:1.4rem;
+            text-transform:uppercase;
+            font-weight:800;
+            margin-bottom:16%;
+        }
+        .image-container{
+            display:flex;
+            justify-content:center;
+        }
+        .images{
+            height:250px;
+            width:250px;
+            position:relative;
+            transform-style:preserve-3d;
+            animation:rotate 20s linear infinite;
+        }
+        .images span{
+            height:100%;
+            width:100%;
+            position:absolute;
+            transform-style:preserve-3d;
+            transform:rotateY(calc(var(--k)*45deg)) translateZ(250px);
+            -webkit-box-reflect:below 1px linear-gradient(transparent,transparent,rgba(145, 131, 131, 0.646))
+        }
+        img{
+            height:250px;
+            width:200px;
+            border-radius:7px;
+            border:2px double lime;
+        }
+        @keyframes rotate{
+            0%{
+                transform:perspective(900px) rotateY(0deg);
+            }
+            100%{
+                transform: perspective(900px) rotateY(360deg);
+            }
+        }
+    </style>
 </head>
 <body>
-    <p>Not Avalable</p>
+    <div class="album">Album 1</div>
+    <div class="image-container">
+        <div class="images">
+            <span style="--k:1"><img src="minwa.jpg" alt=""></span>
+            <span style="--k:2"><img src="jokol.jpg" alt=""></span>
+            <span style="--k:3"><img src="ivy.jpg" alt=""></span>
+            <span style="--k:4"><img src="HighSchool.jpg" alt=""></span>
+            <span style="--k:5"><img src="rem.jpg" alt=""></span>
+            <span style="--k:6"><img src="Mimwa.jpg" alt=""></span>
+            <span style="--k:7"><img src="pam.jpg" alt=""></span>
+            <span style="--k:8"><img src="Profile.jpg" alt=""></span>
+        </div>
+    </div>
 </body>
 </html>
