@@ -1,10 +1,28 @@
 
-let User=document.getElementById('email')
-let Password=document.getElementById('pass')
-let baton=document.querySelector('button')
-let emailError=document.getElementById('email_error')
-let passwordError=document.getElementById('pass_error')
+let User=document.getElementById('email');
+let Password=document.getElementById('pass');
+let baton=document.querySelector('button');
+let emailError=document.getElementById('email_error');
+let PasswordError=document.getElementById('pass_error');
 let form=document.querySelector('form')
+
+let eye=document.getElementById('eye');
+let allowance=document.getElementById('allow');
+
+function showPassword(){
+    if(Password.type==='password'){
+        Password.type='text';
+        eye.style.color='black';
+    }
+    else{
+        Password.type='password';
+        eye.style.color='grey'
+    }
+
+}
+export default showPassword;
+
+eye.addEventListener('click',showPassword)
 
 form.addEventListener('submit',(ev)=>{
     ev.preventDefault()
@@ -12,41 +30,48 @@ form.addEventListener('submit',(ev)=>{
     const Email=User.value.trim()
     const Pass=Password.value.trim()
 
-    //clear input field
-    emailError.textContent==''
-    passwordError.textContent==''
+   let isValid=true;
 
-    let isValid=true
+   function validateEmail(){
 
-    function validateEmail(){
-
-        if(Email===''){
-            emailError.textContent='Email required'
-        }
-        if(Email !='Haningtonemasinde@gmail.com'){
-            emailError.textContent='invalid email'
-            isValid=false
-            return
-        }
+    if(Email==''){
+        emailError.style.height='30px';
+        emailError.textContent='Email required';
+        isValid=false;
+        return;
     }
-    function validatePassword(){
-        
-        if(Pass==''){
-            passwordError.textContent='password required'
-            isValid=false
-            return
-        }
-        if(Pass !='Hani@2005'){
-            passwordError.textContent='Invalid password'
-            isValid=false
-            return
-        }
-    }
-    validateEmail()
-    validatePassword()
-
-    if(isValid){
-        window.location.href='home.html'
+    if(Email!='haningtonemasinde@gmail.com'){
+         emailError.style.height='30px';
+        emailError.textContent='Invalid Email';
+        isValid=false;
+        return;
     }
 
+   }
+
+   function validatePassword(){
+
+    if(Pass==''){
+        allowance.style.marginBottom='20px';
+        PasswordError.textContent='Email required';
+        isValid=false;
+        return;
+    }
+    if(Pass!='Hani@2005'){
+         allowance.style.marginBottom='20px';
+        PasswordError.textContent='Invalid password';
+        isValid=false;
+        return;
+    }
+
+   }
+   
+   validateEmail();
+   validatePassword();
+
+   if(isValid){
+    baton.addEventListener('click',()=>{
+        window.location.href='home.html';
+    })
+   }
 })

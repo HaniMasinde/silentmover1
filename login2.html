@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>login</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="
+    sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
     <style>
         *{
             margin:0;
@@ -17,13 +19,13 @@
             padding-top:10%;
         }
         .login{
-            box-shadow:4px 4px 3px grey;
-            background:rgb(103, 244, 164);
+            background:rgba(84, 165, 119, 0.529);
             width:85%;
             padding:2%;
             display:flex;
             align-items:center;
             justify-content:center;
+            border-radius:15px;
         }
         .login form h2{
             margin-bottom:1%;
@@ -36,8 +38,9 @@
             height:4.5vh;
             margin-bottom:10px;
             border-radius:12px;
+            position:relative;
         }
-        .login form .input-field input{
+         .input-field input{
             height:100%;
             width:100%;
             outline:none;
@@ -46,6 +49,16 @@
             background:#fad;
             border-radius:inherit;
             font-size:1.005rem;
+        }
+        .input-field input:focus{
+            background:rgba(151, 22, 144, 0.35);
+            color:#fff;
+        }
+        .input-field i{
+            position:absolute;
+            right:10px;
+            bottom:6px;
+            color:rgba(11, 172, 226, 0.863);
         }
         .login form .buton{
             display:flex;
@@ -119,14 +132,17 @@
     <div class="login">
         <form action="">
             <h2>login here</h2>
-            <div class="input-field">
+            <div class="input-field" id="change3">
                 <input type="text" placeholder="username eg David" id="name">
+                <i class="fa-solid fa-user"></i>
             </div>
-            <div class="input-field">
+            <div class="input-field" id="change2">
                 <input type="text" placeholder="email eg, example@gmail.com" id="email">
+                <i class="fa-solid fa-envelope"></i>
             </div>
-            <div class="input-field">
+            <div class="input-field" id="change">
                 <input type="password" placeholder="password" id="pass">
+                <i class="fa-solid fa-eye" id="eye"></i>
             </div>
             <div class="buton"><button type="submit">login</button></div>
             <div class="or">
@@ -140,13 +156,29 @@
             
         </form>
     </div>
-    <script>
+    <script module="">
 
-        let username=document.getElementById('name')
-        let email=document.getElementById('email')
-        let password=document.getElementById('pass')
-        let form=document.querySelector('form')
-        let buton=document.querySelector('button') 
+        let username=document.getElementById('name');
+        let email=document.getElementById('email');
+        let password=document.getElementById('pass');
+        let form=document.querySelector('form');
+        let buton=document.querySelector('button') ;
+
+        let change=document.getElementById('change');
+        let change2=document.getElementById('change2');
+        let change3=document.getElementById('change3');
+        let eye=document.getElementById('eye');
+
+        function showPassword(){
+            if(password.type=='password'){
+                password.type='text';
+            }
+            else{
+                password.type='password';
+            }
+        }
+
+        eye.addEventListener('click',showPassword);
 
         form.addEventListener('submit',(ev)=>{
             ev.preventDefault()
@@ -208,6 +240,16 @@
         correctEmail();
         correctPassword();
 
+        change.addEventListener('click',()=>{
+            password.style.borderColor='white';
+        })
+        change2.addEventListener('click',()=>{
+            email.style.borderColor='white';
+        })
+        change3.addEventListener('click',()=>{
+            username.style.borderColor='white';
+        })
+
         if(isValid){
             buton.addEventListener('click',()=>{
                 window.location.href='home.html'
@@ -222,6 +264,9 @@
                 alert('Invalid credentials');
             })
         }
+                name='';
+                email='';
+                pass='';
 
         })
 
