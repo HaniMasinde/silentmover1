@@ -20,7 +20,6 @@ function showPassword(){
     }
 
 }
-export default showPassword;
 
 eye.addEventListener('click',showPassword)
 
