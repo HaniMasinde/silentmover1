@@ -5,6 +5,12 @@
     }
     body{
         background:#fff;
+        color:#000;
+        transition:500ms ease-out;
+    }
+    body.dark-mode{
+        background:#000;
+        color:#fff;
     }
     header{
         border:none;
@@ -33,9 +39,9 @@
         transition:500ms;
         cursor:pointer;
     }
-    header ul li a{
+    header ul li a,#han{
         text-decoration:none;
-        color:#000;
+        color:rgb(57, 193, 239);
     }
     header ul li a:hover,header #han:hover{
         color:blueviolet;
@@ -77,9 +83,22 @@
         padding-left:1.5%;
         padding-top:2%;
     }
+    main button{
+        padding:4px;
+        border-radius:5px;
+        font-weight:700;
+        background:lightblue;
+        transition:.2s;
+        color:green;
+        border:2px solid green;
+    }
+    main button:hover{
+        outline-style:double;
+        outline-color:red;
+    }
     main .info{
-        box-shadow:2px 2px 2px lime;
-        border:1px solid lime;
+        box-shadow:2px 2px 2px rgb(174, 174, 174);
+        border:1px solid rgb(236, 236, 236);
         border-radius:7px;
         padding:3px;
         margin:1.2%;
@@ -90,29 +109,27 @@
         margin-bottom:1%;
     }
     main p{
-        font-size:1.2rem;
+        font-size:1.1rem;
     }
     .image-cont{
         display:flex;
         justify-content:center;
+        margin-top:2.2%;
     }
     .image{
-        height:410px;
-        transform:rotate(-25deg);
-        display:flex;
-        justify-content:center;
-        align-items:center;
-        margin-top:31px;
-        width:240px;
-        background:rgb(208, 205, 205);
-        border-radius:75% 0% 75% 50%;
-        box-shadow:0px 0px 14px lime;
+        height:400px;
+        width:320px;
         overflow:hidden;
+        border:2px solid lime;
+        padding:3px;
+        border-radius:10% 10% 70% 70%;
+        display:flex;
+        align-items: center;
+        justify-content:center;
     }
     img{
-        height:495px;
-        width:600px;
-        transform:rotate(25deg);
+        height:550px;
+        width:400px;
     }
     .las{
         margin-top:10px;
@@ -148,8 +165,8 @@
         color:#fff;
         background:lime;
         border-radius:50%;
-        padding:1px;
-        transition:600ms;
+        padding:3px;
+        transition:400ms;
     }
     footer{
         font-size:1.15rem;

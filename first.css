@@ -64,7 +64,7 @@ footer{
     text-align:center;
     font-size:1.2rem;
 }
-@media(max-width:415px){
+@media(max-width:425px){
     body{
         background:rgb(100, 98, 98)
     }
@@ -82,6 +82,11 @@ footer{
         cursor:pointer;
         padding:8px;
         font-size:1.1rem;
+        transition:1000ms;
+    }
+    header button:hover{
+        outline:double white;
+        transform: scale(.9);
     }
     main{
         font-size:1.5rem;

@@ -3,8 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>contact page</title>
+    <title>contact</title>
     <link rel="stylesheet" href="conta.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="
+    sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
 </head>
 <body>
     <div class="big-cont">
@@ -14,9 +16,13 @@
                     <div class="image">
                         <img src="hani.jpg" alt="Hani">
                     </div>
+                    <div class="name">
+                       <h3>Dev Haningtone</h3>
+                    </div>
                 </div>
             </div>
             <div class="face back">
+                <form action="" id="form">
                 <div class="input-field">
                     <input type="text" placeholder="username" id="username">
                 </div>
@@ -24,20 +30,28 @@
                     <input type="text" placeholder="email" id="email">
                 </div>
                 <div class="text">
-                    <textarea name="" id="" placeholder="write a message to Haningtone" ></textarea>
+                    <textarea name="" id="mess" placeholder="write a message to Haningtone" ></textarea>
                 </div>
                 <div class="btn2">
-                    <button id="sub">submit</button>
+                    <button id="sub" type="submit">submit</button>
                 </div>
+                </form>
                 <div class="others">
-                    Call:0794358892<br>Message:0113745958<br>
-                    Email:Haningtonemasinde@gmail.com
+                    <div class="call">
+                        <i class="fa-solid fa-phone"></i>  
+                        <h3>::0794358892</h3>
+                    </div>
+                    <div class="call">
+                        <i class="fa-solid fa-envelope"></i>
+                        <h3>:haningtonemasinde@gmail.com</h3>
+                    </div>
+                    
                 </div>
             </div>
         </div>
     </div>
     <div class="btn">
-        <button id="flick" onclick="rot()">Click Here</button>
+        <button id="flick">Click Here</button>
     </div>
     <footer>
         <p>&copy;2025</p>
@@ -52,5 +66,77 @@
     function rot(){
         tar.style.transform='rotateY(180deg)';
     }
+    buton.addEventListener('click',rot);
+
+    let user=document.getElementById('username');
+    let email=document.getElementById('email'); 
+    let form=document.getElementById('form')
+
+    let write=document.getElementById('mess')
+
+    let subm=document.getElementById('sub');
+
+    form.addEventListener('submit',(event)=>{
+
+        event.preventDefault();
+
+        let Isvalid=true;
+
+        function validateUser(){
+            let Name=user.value.trim();
+
+            if(Name==''){
+                isValid=false;
+                user.style.boxShadow='1px 2px 2px red';
+                return;
+            }
+        }
+
+        function validateEmail(){
+            let Email=email.value.trim();
+
+            if(Email==''){
+                isValid=false;
+                email.style.borderColor='red';
+            }
+            if(!Email.includes('@gmail.com')){
+                email.style.boxShadow='1px 2px 2px red';
+                isValid=false;
+            }
+        }
+        function validateText(){
+            let Mess=write.value.trim();
+
+            if(Mess==''){
+                Isvalid=false;
+                write.style.borderColor='red';                
+            }
+        }
+        validateUser();
+        validateEmail();
+        validateText();
+
+        if(Isvalid){
+            subm.addEventListener('click',()=>{
+                alert('Message sent succesfully')
+            })
+        }
+
+    })
+                user='';
+                email='';
+    user.addEventListener('click',(e)=>{
+        e.target.style.boxShadow='1px 2px 2px grey'
+    })
+
+    email.addEventListener('click',(eve)=>{
+        eve.target.style.boxShadow='1px 2px 2px grey'
+    })
+
+    write.addEventListener('click',(ev)=>{
+        ev.target.style.borderColor='white'
+    })
+    
+
     </script>
 </html>
