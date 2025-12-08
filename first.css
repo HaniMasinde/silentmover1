@@ -29,20 +29,26 @@ header button{
     font-weight:650;
     font-size:1.2rem;
     border-radius:10px;
-    background:red;
+    background:rgb(17, 255, 0);
     border:none;
     animation:log 2000ms infinite;
     transition:.5s;
 }
 @keyframes log{
     0%{
-        box-shadow:0px 0px 0px red;
+        box-shadow:0px 0px 0px green;
+        }
+        25%{
+            box-shadow:0px 0px 5px green;
         }
     50%{
-        box-shadow:0px 0px 15px red;
+        box-shadow:0px 0px 10px green;
+    }
+    75%{
+        box-shadow:0px 0px 15px green;
     }
     100%{
-        box-shadow:0px 0px 0px red;
+        box-shadow:0px 0px 0px green;
     }
 }
 header button:hover{
@@ -64,9 +70,13 @@ footer{
     text-align:center;
     font-size:1.2rem;
 }
-@media(max-width:425px){
+@media(max-width:600px){
     body{
-        background:rgb(100, 98, 98)
+        background:url('landingbg.jpg');
+        background-position:center;
+        background-size:cover;
+        background-repeat:no-repeat;
+        background-attachment:fixed;
     }
     header{
         background:rgb(150, 147, 147);
@@ -94,5 +104,6 @@ footer{
     }
     footer{
         font-size:1.1rem;
+        color:#fff;
     }
 }

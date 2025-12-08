@@ -101,18 +101,18 @@ form .image-container{
         transform:rotate(360deg);
     }
 }
-.login1-container .container form .image-container .image img{
+.image-container .image img{
     width:100%;
     height:100%;
     border-radius:inherit;
 }
-.login1-container .container form .input-field{
+ form .input-field{
     margin:2% 3%;
     height:4.6vh;
     position:relative;
     border-radius:10px;
 }
-.login1-container .container form .input-field input{
+form .input-field input{
     width:100%;
     height:100%;
     outline:none;
@@ -126,7 +126,7 @@ form .image-container{
 input::placeholder{
     font-size:1.1rem;
 }
-.login1-container .container form .input-field input:focus{
+.input-field input:focus{
     border:2px solid rgb(112, 112, 112);
     background:rgba(129, 104, 152, 0.496);
 }
@@ -137,29 +137,30 @@ input::placeholder{
 }
  form .input-field i{
     position:absolute;
-    right:10px;
-    bottom:13px;
+    right:5px;
+    bottom:7px;
+    font-size:1.4rem;
 }
 .input-field .fa-envelope{
     font-size:1.6rem;
     color:#fff;
-    bottom:5px;
 }
-.login1-container .container form .btn{
+ form .btn{
     display:flex;
     justify-content:center;
     height:4vh;
     margin-top:-.4%;
     margin-bottom:.4%;
 }
- form .btn button{
+.btn button{
     width:30%;
     border-radius:10px;
     border:2px solid green;
     font-size:1.2rem;
     font-weight:700;
+    height:100%;
     background:rgb(162, 11, 11);
-    transition:600ms;
+    transition:400ms;
 }
 .btn button:hover{
     background:blue;
@@ -214,7 +215,7 @@ form .p1 a{
     }
 }
 }
-@media(max-width:500px){
+@media(max-width:600px){
     body{
         background-image:url('loginbg.jpg');
         background-size:cover;
@@ -231,6 +232,9 @@ form .p1 a{
         color:hotpink;
         margin:2% 0;
     }
+    form .input-field i{
+        font-size:1.3rem;
+    }
     .login1-container:hover{
         animation:none;
     }
@@ -240,17 +244,24 @@ form .p1 a{
         outline-color:#fff;
         backdrop-filter: blur(3px);
     }
+    form .btn{
+        height:40px;
+    }
     .btn button:hover{
         outline-style:double;
         outline-width:5px;
         outline-color: #fff;
         transform: scale(.9);
     }
+    form .input-field{
+        height:5vh;
+    }
     form .nm{
         margin:2%;
     }
     form .p1{
         color:#000;
+        font-size:1.3rem;
     }
     footer p{
         color:#000;

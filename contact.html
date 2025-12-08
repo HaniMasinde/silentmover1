@@ -97,10 +97,10 @@
 
             if(Email==''){
                 isValid=false;
-                email.style.borderColor='red';
+                email.style.boxShadow='1px 2px 2px red';
             }
             if(!Email.includes('@gmail.com')){
-                email.style.boxShadow='1px 2px 2px red';
+                email.style.borderColor='1px 2px 2px red';
                 isValid=false;
             }
         }
@@ -118,13 +118,12 @@
 
         if(Isvalid){
             subm.addEventListener('click',()=>{
-                alert('Message sent succesfully')
+                email.textContent='';
+                user.textContent='';
             })
         }
 
     })
-                user='';
-                email='';
     user.addEventListener('click',(e)=>{
         e.target.style.boxShadow='1px 2px 2px grey'
     })

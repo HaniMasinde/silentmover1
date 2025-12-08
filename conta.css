@@ -98,7 +98,7 @@ body{
 }
 .call i{
     font-size:2rem;
-    color:green;
+    color:#fff;
 }
 .small .front{
     background:green;
@@ -157,11 +157,14 @@ footer{
         background-repeat:no-repeat;
         background-attachment: fixed;
     }
+    .big-cont .small{
+        height:75vh;
+    }
     .small .front{
         background: lightblue;
     }
     .front .image-cont{
-        height:75%;
+        height:88%;
         width:95%;
     }
     .front .image-cont .image{
@@ -215,7 +218,7 @@ footer{
     }
     .call i{
         font-size:1.5rem;
-        color:lime;
+        color:rgb(255, 255, 255);
     }
     footer{
         font-size:1.1rem;
@@ -231,7 +234,6 @@ footer{
         border:none;
     }
     .big-cont .small{
-        border:2px solid blue;
         height:500px;
         width:500px;
     }
