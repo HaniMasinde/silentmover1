@@ -149,7 +149,7 @@ footer{
     text-align:center;
     font-size:1.3rem;
 }
-@media(max-width:600px){
+@media(max-width:720px){
     body{
         background-image:url('contact.jpg');
         background-position:center;

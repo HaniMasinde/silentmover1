@@ -215,7 +215,7 @@ form .p1 a{
     }
 }
 }
-@media(max-width:600px){
+@media(max-width:720px){
     body{
         background-image:url('loginbg.jpg');
         background-size:cover;
